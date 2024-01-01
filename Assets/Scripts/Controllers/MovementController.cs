@@ -12,9 +12,9 @@ namespace Game.Controllers
             _model = model;
         }
 
-        public void Jump(Rigidbody2D rb2d, Transform body, float bodyHalfHeigh = 0.5f, float distanceCheck = 0.01f)
+        public void Jump(Rigidbody2D rb2d, Transform body, float bodyHalfHeight = 0.5f, float distanceCheck = 0.01f)
         {
-            if (Physics2D.Raycast(new Vector2(body.position.x, body.position.y - bodyHalfHeigh - 0.01f),
+            if (Physics2D.Raycast(new Vector2(body.position.x, body.position.y - bodyHalfHeight - 0.01f),
                     -Vector2.up, distanceCheck))
                 rb2d.AddForce(Vector2.up * _model.jumpStrength);
         }
